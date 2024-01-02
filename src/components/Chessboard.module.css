@@ -1,0 +1,73 @@
+.chessboardWrapper {
+ box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+.chessboard {
+ width: 1200px;
+ aspect-ratio: 1;
+ display: grid;
+ grid-template-columns: repeat(8, 1fr);
+ grid-template-rows: repeat(8, 1fr);
+}
+
+.light {
+ background-color: #f9b6db8a;
+}
+.dark {
+ background-color: rgba(128, 0, 128, 0.661);
+}
+.field {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+.field::after {
+ content: "";
+ display: block;
+ position: absolute;
+}
+.highlightField,
+.highlightFieldAsTargetPos {
+ cursor: pointer;
+}
+.highlightField::after {
+ width: 100%;
+ height: 100%;
+ background-color: rgba(127, 255, 212, 0.15);
+ inset: 0;
+}
+.highlightField:hover::after {
+ background-color: transparent;
+}
+.highlightFieldAsTargetPos::after {
+ inset: 20%;
+ background-color: rgba(79, 11, 46, 0.683);
+ border-radius: 50%;
+}
+
+.statusbar {
+ background-color: #170421;
+ border-radius: 8px;
+ padding: 6px 10px;
+ color: white;
+ font-size: 18px;
+ margin-bottom: 1ex;
+ margin-top: -5ex;
+}
+
+.chesspiece {
+ width: 60%;
+ height: 60%;
+ border-radius: 50%;
+}
+.chesspiece > svg {
+ width: 100%;
+ height: 100%;
+}
+
+.darkPlayer {
+ color: black;
+}
+.lightPlayer {
+ color: white;
+}
