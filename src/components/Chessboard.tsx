@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import classes from "./Chessboard.module.css";
-import { Board, ChessPiece } from "@/utils/Board";
+import { Board } from "@/utils/Board";
 
 export function Chessboard() {
  const [currentBoard, setCurrentBoard] = useState(new Board());
