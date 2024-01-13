@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import classes from "./Chessboard.module.css";
-import { Board, ChessPiece } from "@/utils/Board";
+import { Board } from "@/utils/board";
+import { IconChess, IconChessFilled } from "@tabler/icons-react";
 
 export function Chessboard() {
  const [currentBoard, setCurrentBoard] = useState(new Board());
@@ -22,7 +23,13 @@ export function Chessboard() {
           " "
          )}
          key={`${rowIndex}_${columnIndex}`}
-        ></div>
+        >
+         {field !== 0 && (
+          <div className={classes.chesspiece}>
+           {field.kind === "pawn" && <IconChessFilled />}
+          </div>
+         )}
+        </div>
        );
       });
      })}

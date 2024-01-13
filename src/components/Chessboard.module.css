@@ -15,9 +15,20 @@
 .dark {
  background-color: rgba(128, 0, 128, 0.661);
 }
+
 .field {
  display: flex;
  justify-content: center;
  align-items: center;
  position: relative;
+}
+
+.chesspiece {
+ width: 70%;
+ height: 70%;
+ border-radius: 50%;
+}
+.chesspiece svg {
+ width: 100%;
+ height: 100%;
 }
