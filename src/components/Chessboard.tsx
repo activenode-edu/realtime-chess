@@ -33,7 +33,13 @@ export function Chessboard() {
          key={`${rowIndex}_${columnIndex}`}
         >
          {field !== 0 && (
-          <div className={classes.chesspiece}>
+          <div
+           className={
+            classes.chesspiece +
+            " " +
+            (field.player === "dark" ? classes.darkPlayer : classes.lightPlayer)
+           }
+          >
            {field.kind === "pawn" && <IconChessFilled />}
            {field.kind === "rook" && <IconChessRookFilled />}
            {field.kind === "knight" && <IconChessKnightFilled />}

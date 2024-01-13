@@ -32,3 +32,10 @@
  width: 100%;
  height: 100%;
 }
+
+.darkPlayer {
+ color: black;
+}
+.lightPlayer {
+ color: white;
+}
