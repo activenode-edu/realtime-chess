@@ -3,7 +3,7 @@ type PlayerType = "light" | "dark";
 
 class ChessPiece {
  constructor(public kind: ChessPieceKind, public player: PlayerType) {
-  // doesnt need additional code here
+  // no additional code needed
  }
 }
 
@@ -27,12 +27,12 @@ export class Board {
    dp("knight"),
    dp("rook"),
   ],
-  [dp(), dp(), dp(), dp(), dp(), dp(), dp(), dp()], //only pawns here
+  [dp(), dp(), dp(), dp(), dp(), dp(), dp(), dp()], // only dark pawns
   [0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0],
-  [lp(), lp(), lp(), lp(), lp(), lp(), lp(), lp()],
+  [lp(), lp(), lp(), lp(), lp(), lp(), lp(), lp()], // light pawns
   [
    lp("rook"),
    lp("knight"),

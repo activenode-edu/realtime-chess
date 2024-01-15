@@ -22,14 +22,14 @@ export function Chessboard() {
      {currentBoard.fields.map((boardRow, rowIndex) => {
       const isEven = rowIndex % 2 === 0;
       let light = !isEven;
-      return boardRow.map((field, columnIndex) => {
+      return boardRow.map((field /** 0 or ChessPiece **/, columnIndex) => {
        light = !light;
 
        return (
         <div
-         className={[classes.field, light ? classes.light : classes.dark].join(
-          " "
-         )}
+         className={
+          classes.field + " " + (light ? classes.light : classes.dark)
+         }
          key={`${rowIndex}_${columnIndex}`}
         >
          {field !== 0 && (

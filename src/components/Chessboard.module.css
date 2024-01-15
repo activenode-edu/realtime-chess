@@ -20,7 +20,6 @@
  display: flex;
  justify-content: center;
  align-items: center;
- position: relative;
 }
 
 .chesspiece {
@@ -28,6 +27,7 @@
  height: 60%;
  border-radius: 50%;
 }
+
 .chesspiece svg {
  width: 100%;
  height: 100%;
